@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestLeds {
     @Test
-    public void test() {
+    public void test_scenario() {
         LedDriverInterface driver = new WS281x(800000, 10, 10, 100, 18, StripType.WS2811_RGB);
 
         for (int pixel = 0 ; pixel < driver.getNumPixels(); pixel++) {
