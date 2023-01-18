@@ -5,9 +5,10 @@ import com.github.mbelling.ws281x.Ws281xLedStrip;
 
 public class Test {
     @org.junit.jupiter.api.Test
-    public void test() {
+    public void test() throws InterruptedException {
         Ws281xLedStrip ledStrip = new Ws281xLedStrip(16, 10, 800000, 10, 255, 0, false, WS2811_STRIP_RGB, true);
         ledStrip.setStrip(Color.RED);
-        System.out.println("pemponzzi");
+        ledStrip.render();
+        Thread.sleep(10 * 1000);
     }
 }
