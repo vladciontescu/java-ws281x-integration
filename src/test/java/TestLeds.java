@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestLeds {
     private final LedStrip strip = new Ws281xLedStrip(18, 18, 800000, 10, 100, 0, false, LedStripType.WS2811_STRIP_GRB, false);
-    private final LedDriverInterface driver = new WS281x(18, 100, 18);
+    private final LedDriverInterface driver = new WS281x(10, 100, 18);
 
     /*@Test
     @Order(1)
