@@ -11,9 +11,9 @@ import org.junit.jupiter.api.Test;
 
 public class TestLeds {
     private final LedStrip strip = new Ws281xLedStrip(18, 18, 800000, 10, 100, 0, false, LedStripType.WS2811_STRIP_GRB, false);
-    private final LedDriverInterface driver = new WS281x(10, 100, 18);
+    private final LedDriverInterface driver = new WS281x(18, 100, 18);
 
-    /*@Test
+    @Test
     @Order(1)
     public void test_turn_on() {
         System.out.println("RED");
@@ -49,9 +49,9 @@ public class TestLeds {
         strip.setStrip(Color.BLACK);
         strip.render();
         waiting();
-    }*/
+    }
 
-    @Test
+    /*@Test
     public void test_diozero() {
         System.out.println("RED");
         colorLed(PixelColour.RED);
@@ -61,7 +61,7 @@ public class TestLeds {
         colorLed(PixelColour.BLUE);
         System.out.println("OFF");
         driver.allOff();
-    }
+    }*/
 
     private void colorLed(int color) {
         for (int pixel=0; pixel<driver.getNumPixels(); pixel++) {
